@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-
-
+ name ='malek';
+imageUrl ="./../../assets/img/training.jpg";
   constructor() { }
+hello(myname:String)
+{
+  alert('hello , my name is  :'+myname);
+}
 
   ngOnInit(): void {
   }
