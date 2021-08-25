@@ -2,3 +2,15 @@
 <img [src]="imageUrl" alt="formalab" width="150px">
 <br>
 <button class="btn btn-success" (click)="hello(name)"> Click Here</button>
+<ul *ngFor='let bookname of booklist'>
+    <li>{{bookname}}
+    </li>
+</ul>
+<br>
+<br>
+<p class="alert alert-warning" *ngIf="myCondition">
+  hello
+</p>
+<div class="alert alert-warning" *ngIf="booklist.length==0">
+    no books found
+</div>

@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
  name ='malek';
 imageUrl ="./../../assets/img/training.jpg";
+
+booklist= [];
+
+myCondition=false;
   constructor() { }
 hello(myname:String)
 {
