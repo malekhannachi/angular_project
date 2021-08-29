@@ -15,6 +15,7 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule, ToastNoAnimation, ToastNoAnimationModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule ,
      ReactiveFormsModule,
-     HttpClientModule
+     HttpClientModule,
+     ToastNoAnimationModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

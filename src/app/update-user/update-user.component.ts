@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-update-user',
   templateUrl: './update-user.component.html',
@@ -8,7 +10,7 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class UpdateUserComponent implements OnInit {
   updateUserForm: FormGroup
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private route:ActivatedRoute,private userService:UserService) {
 
     let formControls = {
       firstname: new FormControl('', [
@@ -38,6 +40,10 @@ export class UpdateUserComponent implements OnInit {
 
 
   ngOnInit(): void {
+    let idUser = this.route.snapshot.params.id;
+    
+
+    
   }
 
   updateUser() {

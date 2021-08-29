@@ -5,9 +5,13 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class UserService {
+  getOneUser(idUser: any) {
+    throw new Error('Method not implemented.');
+  }
 private getAllUsersUrl ="https://backend-people-crud-app.herokuapp.com/users";
 private deleteUserUrl = "https://backend-people-crud-app.herokuapp.com/users/";
 private addUserUrl = "https://backend-people-crud-app.herokuapp.com/users/add";
+private updateUserUrl = "https://backend-people-crud-app.herokuapp.com/users/update";
 
   constructor(private http:HttpClient) {  }
 
@@ -21,6 +25,10 @@ private addUserUrl = "https://backend-people-crud-app.herokuapp.com/users/add";
 
   addUser(user:User){
     return this.http.post<any>(this.addUserUrl,user);
+  }
+
+  updateUser(user:User){
+    return this.http.put<any>(this.updateUserUrl, user);
   }
 
 
