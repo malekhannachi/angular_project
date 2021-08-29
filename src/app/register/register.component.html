@@ -47,12 +47,16 @@
           <small *ngIf="repassword?.errors?.required" class="text-danger">Repeat Password is required<br></small>
         
       </div>
+      <div *ngIf="repassword?.valid && repassword?.value != password?.value" class="text-danger">
+        The passwords entered do not match
+    </div>
       <label for="repeatPassword"> repeat Password</label>
     </div>
     <div class="checkbox mb-3">
 
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit"
+     [disabled]="registerForm.invalid || repassword?.value != password?.value">Sign in</button>
 
   </form>
 </main>
