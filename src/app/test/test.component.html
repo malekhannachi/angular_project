@@ -20,4 +20,9 @@ pattern="[a-z .'-]+" minLength="2">
 <button class="btn btn-danger">Send</button>
 
 </form>
+<hr>
+
+<ul *ngFor="let user of usersList">
+    <li>{{ user.name }}</li>
+</ul>
 </div>
